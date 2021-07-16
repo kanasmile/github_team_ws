@@ -33,14 +33,14 @@
 			},false);
 		}
 
-		// ＝のイベントハンドラ
+		// ?���?�イベントハンドラ
 		document.getElementById("eqlbtn").addEventListener("click",equal,false);
 
 		// ac のイベントハンドラ
 		document.getElementById("clr").addEventListener("click",allClear,false);
 	}
 
-	// 数字キーが押された際の処理
+	// 数字キーが押された際の処�?
 	function pushNumber(new_num){
 
 		if( eqlFlag || eqlNum.value == "ERROR" || midNum[0].value == "NaN" ){
@@ -58,7 +58,7 @@
 		mid1NumFlag = true;
 	}
 
-	// 演算子が押された際の処理
+	// 演算子が押された際の処�?
 	function pushSymbol(new_cont){
 
 		if(midNumKey == 0){
@@ -88,7 +88,7 @@
 				ope.textContent = ("-");
 				break;
 			case "mul":
-				ope.textContent = ("×");
+				ope.textContent = ("�?");
 				break;
 			case "div":
 				ope.textContent = ("÷");
@@ -98,25 +98,25 @@
 		mid1NumFlag = false;
 	}
 
-	//＝を押したときの処理
+	//?��を押したとき�?�処�?
 	function equal() {
 
-		//四則演算ごとの関数を呼び出す
+		//四則演算ごとの関数を呼び出�?
 		switch(cont){
 			case "add":
-				// add関数で足し算の処理
+				// add関数で足し算�?�処�?
 				add();
 				break;
 			case "sub":
-				// sub関数で引き算の処理
+				// sub関数で引き算�?�処�?
 				sub();
 				break;
 			case "mul":
-				// mul関数で掛け算の処理
+				// mul関数で掛け算�?�処�?
 				mul();
 				break;
 			case "div":
-				// div関数で割り算の処理
+				// div関数で割り算�?�処�?
 				div();
 				break;
 		}
@@ -125,21 +125,23 @@
 
 	}
 	
-	/* 演習の編集範囲 はじめ */
+	/* 演習�?�編�?�?囲 はじめ */
 
-	/* 演習1 ここから */
+	/* 演�?1 ここから */
 	function add () {
 		eqlNum.value = parseFloat(midNum[0].value) + parseFloat(midNum[1].value);
 	}
-	function sub () {}
-	// TODO: このコメントアウトを削除して書く
-	/* 演習1 ここまで */
+	function sub () {
+		eqlNum.value = parseFloat(midNum[0].value) - parseFloat(midNum[1].value);
+	}
+	// TODO: こ�?�コメントアウトを削除して書�?
+	/* 演�?1 ここまで */
 
-	/* TODO: 演習2 以降は下記に自由に記入 */
+	/* TODO: 演�?2 以降�?�下記に自由に記�?� */
 
-	/* 演習の編集範囲 おわり */
+	/* 演習�?�編�?�?囲 おわ�? */
 
-	// ac を押したときの処理
+	// ac を押したとき�?�処�?
 	function allClear(){
 		midNum[0].value = "0";
 		ope.textContent = " ";
