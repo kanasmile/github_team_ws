@@ -134,6 +134,9 @@
 	function sub () {
 		eqlNum.value = parseFloat(midNum[0].value) - parseFloat(midNum[1].value);
 	}
+	function mul () {
+		eqlNum.value = parseFloat(midNum[0].value) * parseFloat(midNum[1].value);
+	}
 	// TODO: こ�?�コメントアウトを削除して書�?
 	/* 演�?1 ここまで */
 
